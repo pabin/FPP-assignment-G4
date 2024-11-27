@@ -12,25 +12,25 @@ may not call Arrays.sort() to sort the input array. (No credit if you do it this
 
 public class Prog6 {
     public static void main(String[] args) {
-        int[] nums = {3,1, 0,6,9,4};
+//        int[] nums = {3, 1, 0, 6, 9, 4};
 //        int[] nums = {8,6,9, 1,2,4};
+        int[] nums = {1, 2, 0, 6, 9, 4};
         int result = secondMin(nums);
-        System.out.println("result:" +  result);
+        System.out.println("result:" + result);
     }
 
     public static int secondMin(int[] arrayOfInts) {
-        int minValue = Integer.MAX_VALUE;
-        int secondMin = Integer.MAX_VALUE;
+        int minValue = arrayOfInts[0];
+        int secondMin = arrayOfInts[1];
 
-        for (int num : arrayOfInts) {
-            if (num < minValue) {
-                minValue = num;
+        for (int i = 1; i < arrayOfInts.length; i++) {
+            if (arrayOfInts[i] < minValue) {
+                secondMin = minValue;
+                minValue = arrayOfInts[i];
             }
-        }
 
-        for (int num : arrayOfInts) {
-            if (num > minValue && num < secondMin) {
-                secondMin = num;
+            if (arrayOfInts[i] > minValue && arrayOfInts[i] < secondMin) {
+                secondMin = arrayOfInts[i];
             }
         }
         return secondMin;
