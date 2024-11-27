@@ -10,7 +10,7 @@ Input array b: [ 3,8,9,11]
 Output arrays: [ 5,6,-4,3,1, 3,8,9,11]
  */
 
-public class ProblemFive {
+public class Prog5 {
     public static void main(String[] args) {
         int[] a = {3, 1, 6, 9, 2, 4};
         int[] b = {8, 0, 1, 5};

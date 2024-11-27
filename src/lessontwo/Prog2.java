@@ -10,7 +10,7 @@ Output to the console the following two values:
 using the Math.round function.
 */
 
-public class ProblemTwo {
+public class Prog2 {
     public static void main(String[] args) {
         float variable1 = 1.27f;
         float variable2 = 3.881f;

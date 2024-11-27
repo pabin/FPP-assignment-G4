@@ -11,7 +11,7 @@ To get the random numbers, apply the knowledge gained
 from the Random Generator. Print the result two digits after decimal using System.out.prinf().
 */
 
-public class ProblemOne {
+public class Prog1 {
     public static void main(String[] args) {
         Random random = new Random();
 

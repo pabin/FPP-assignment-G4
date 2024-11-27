@@ -10,7 +10,7 @@ NOTE: You may not use the sorting tools available in the Java libraries; for ins
 may not call Arrays.sort() to sort the input array. (No credit if you do it this way.)
 */
 
-public class ProblemSix {
+public class Prog6 {
     public static void main(String[] args) {
         int[] nums = {3,1, 0,6,9,4};
 //        int[] nums = {8,6,9, 1,2,4};
