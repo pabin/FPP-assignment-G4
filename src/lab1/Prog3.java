@@ -1,4 +1,4 @@
-package lessontwo;
+package lab1;
 
 import java.util.Arrays;
 
@@ -14,7 +14,7 @@ example)
  */
 public class Prog3 {
     public static void main(String[] args) {
-        String records = "231A,Light Bulb,123,Wilco,1.75:"+
+        String records = "231A,Light Bulb,123,Wilco,1.75:" +
                 "113D,Hairbrush,19,Aamco,3.75:" +
                 "521W,Shampoo,24,Acme,6.95:" +
                 "440Q,Dishwashing Detergent,20,Wilco,1.75:" +
@@ -48,7 +48,7 @@ public class Prog3 {
         int j = 0;
         String[] productsId = new String[N];
 
-        for(String str: listStrs) {
+        for (String str : listStrs) {
             String[] tempStr = str.split(",");
             productsId[j] = tempStr[0];
             j++;

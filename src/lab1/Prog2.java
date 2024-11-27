@@ -1,4 +1,4 @@
-package lessontwo;
+package lab1;
 
 /*
 Create a class Prog2. Inside its main method, create float variables to store each of the following

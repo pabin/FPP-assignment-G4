@@ -1,4 +1,5 @@
-package lessontwo;
+package lab1;
+
 import java.util.Random;
 
 /* Problem – 1
@@ -15,7 +16,7 @@ public class Prog1 {
     public static void main(String[] args) {
         Random random = new Random();
 
-        int x  = random.nextInt(1, 10);
+        int x = random.nextInt(1, 10);
         double result1 = Math.pow(Math.PI, x);
 
         int y = random.nextInt(3, 15);

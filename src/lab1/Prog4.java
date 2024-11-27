@@ -1,4 +1,4 @@
-package lessontwo;
+package lab1;
 
 import java.util.Arrays;
 
@@ -14,7 +14,7 @@ then the output would be the following array:
 public class Prog4 {
 
     public static void main(String[] args) {
-        String[] str =  {"horse", "dog", "cat", "horse", "dog", "dog"};
+        String[] str = {"horse", "dog", "cat", "horse", "dog", "dog"};
         String[] result = removeDuplicates(str);
         System.out.println(Arrays.toString(result));
     }
@@ -26,7 +26,7 @@ public class Prog4 {
         if (list.length != 0) {
             for (int i = 0; i < N; i++) {
                 for (int j = i + 1; j < N; j++) {
-                    if (!list[i].equals("visited") && !list[j].equals("visited")  && list[i].equals(list[j])) {
+                    if (!list[i].equals("visited") && !list[j].equals("visited") && list[i].equals(list[j])) {
                         list[j] = "visited";
                         duplicates++;
                     }

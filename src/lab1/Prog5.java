@@ -1,4 +1,4 @@
-package lessontwo;
+package lab1;
 
 /*
 Create a class Prog5 and implement the given method, which takes the two arrays of
@@ -28,7 +28,7 @@ public class Prog5 {
         int index1 = 0;
         int index2 = 0;
 
-        for (int i=0; i<totalLength; i++) {
+        for (int i = 0; i < totalLength; i++) {
             if (i < a.length) {
                 combinedArray[i] = a[index1];
                 index1++;

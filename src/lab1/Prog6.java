@@ -1,4 +1,4 @@
-package lessontwo;
+package lab1;
 
 /*
 Create a Java method to find the second minimum value. Write your own logic without API usage.
