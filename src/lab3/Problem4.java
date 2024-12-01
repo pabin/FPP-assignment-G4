@@ -17,7 +17,7 @@ public class Problem4 {
         System.out.println(test1.isPalindrome(33153));
     }
 
-    private int reverse(int num, int intLen) {
+    public int reverse(int num, int intLen) {
         if (num <= 0) {
             return 0;
         } else {
