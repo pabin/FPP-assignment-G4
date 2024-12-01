@@ -20,8 +20,6 @@ public class HeartRates {
         this.dateOfBirth = dateOfBirth;
     }
 
-
-
     public String getFistName() {
         return firstName;
     }
@@ -45,8 +43,9 @@ public class HeartRates {
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
-    public String toString(int age, int maxHeartRates){           //using these toString to avoid the output like this [com.steve.test.Student@6e1408, com.steve.test.Student@e53108]
-        return "First Name: " + firstName + "\n" +"Last Name " + lastName + "\n" + "Age " + age + "\n" +"Date of birth: "  +dateOfBirth + "\n" +"Maximum heart rate:" + maxHeartRates + "";
+
+    public String toString(int age, int maxHeartRates) {           //using these toString to avoid the output like this [com.steve.test.Student@6e1408, com.steve.test.Student@e53108]
+        return "First Name: " + firstName + "\n" + "Last Name " + lastName + "\n" + "Age " + age + "\n" + "Date of birth: " + dateOfBirth + "\n" + "Maximum heart rate:" + maxHeartRates + "";
     }
 
     public static Period calculateAge(LocalDate birthday) {
@@ -60,8 +59,8 @@ public class HeartRates {
         LocalDate birthday;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
         while (true) {
-           String input = scanner.nextLine();
-           heartRates.setDateOfBirth(input);
+            String input = scanner.nextLine();
+            heartRates.setDateOfBirth(input);
 
             try {
                 birthday = LocalDate.parse(input, formatter);
@@ -70,14 +69,14 @@ public class HeartRates {
                 System.out.println(Period.between(birthday, today));
                 return Period.between(birthday, today);
 
-            } catch(DateTimeParseException e) {
+            } catch (DateTimeParseException e) {
                 System.out.println("Error! Please try again");
             }
         }
     }
 
     public static int calculateMaxHeartRate(int age) {
-        return 220-age;
+        return 220 - age;
     }
 
     public static int avgHeartRates(int maxHeartRates) {
@@ -85,14 +84,14 @@ public class HeartRates {
     }
 
     public static double lowerBounderyHeartRates(int avgHeartRates) {
-        return avgHeartRates*LOWER_BOUNDARY + RESTING_HEART_RATE;
+        return avgHeartRates * LOWER_BOUNDARY + RESTING_HEART_RATE;
     }
 
     public static double upperBounderyHeartRates(int avgHeartRates) {
-        return avgHeartRates*UPPER_BOUNDARY + RESTING_HEART_RATE;
+        return avgHeartRates * UPPER_BOUNDARY + RESTING_HEART_RATE;
     }
 
-    public static void main(String[] arggs) {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         LocalDate birthday;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
@@ -107,9 +106,7 @@ public class HeartRates {
         sc.nextLine();
 
         System.out.println("Please, enter your birthday in the format-"
-                + " yyyy-MM-dd -Exemple 1980-9-28): ");
-
-
+                + " yyyy-MM-dd -Example 1980-9-28): ");
 
         while (true) {
             String input = sc.nextLine();
@@ -125,9 +122,9 @@ public class HeartRates {
                 int avgHeartRate = avgHeartRates(maxHeartRates);
                 double lowerBounderyHeartRates = lowerBounderyHeartRates(avgHeartRate);
                 double upperBounderyHeartRates = upperBounderyHeartRates(avgHeartRate);
-                System.out.println("The Target Heart Rate Range Is Between " +lowerBounderyHeartRates + " And " +upperBounderyHeartRates);
+                System.out.println("The Target Heart Rate Range Is Between " + lowerBounderyHeartRates + " And " + upperBounderyHeartRates);
                 System.out.println(heartRates.toString(age, maxHeartRates));
-            } catch(DateTimeParseException e) {
+            } catch (DateTimeParseException e) {
                 System.out.println("Error! Please try again");
             }
 
