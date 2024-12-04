@@ -1,4 +1,4 @@
-package lab4;
+package lab4.problem1;
 
 public class Furniture extends Product {
 

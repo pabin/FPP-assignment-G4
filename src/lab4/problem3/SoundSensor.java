@@ -1,26 +1,25 @@
-package lab4;
+package lab4.problem3;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class TemparatureSensor implements Sensor{
+public class SoundSensor implements Sensor{
 
-    private double temperature;
+    private double soundLevel;
 
     @Override
     public String getSensorType() {
-        return "Temperature";
+        return "Sound";
     }
 
     @Override
     public double getReading() {
-        return temperature;
+        return soundLevel;
     }
 
     @Override
     public String getLocation() {
-        return "Living Room";
+        return "Bedroom";
     }
 
     @Override
@@ -31,8 +30,8 @@ public class TemparatureSensor implements Sensor{
 
     @Override
     public String performAction() {
-        if(temperature >= 30)
-            return "“An alert to turn on the AC";
-        return "Temperature is in normal range";
+        if(soundLevel >= 70)
+            return "An alert to turn on noise cancellation";
+        return "Sound is within normal range";
     }
 }

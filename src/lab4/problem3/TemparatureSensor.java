@@ -1,25 +1,25 @@
-package lab4;
+package lab4.problem3;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class LightSensor implements Sensor{
+public class TemparatureSensor implements Sensor{
 
-    private double lightlevel;
+    private double temperature;
 
     @Override
     public String getSensorType() {
-        return "Light";
+        return "Temperature";
     }
 
     @Override
     public double getReading() {
-        return lightlevel;
+        return temperature;
     }
 
     @Override
     public String getLocation() {
-        return "Garden";
+        return "Living Room";
     }
 
     @Override
@@ -30,8 +30,8 @@ public class LightSensor implements Sensor{
 
     @Override
     public String performAction() {
-        if(lightlevel <= 100)
-            return "“an alert to turn on the light";
-        return "Light is sufficient";
+        if(temperature >= 30)
+            return "“An alert to turn on the AC";
+        return "Temperature is in normal range";
     }
 }

@@ -1,26 +1,25 @@
-package lab4;
+package lab4.problem3;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class SoundSensor implements Sensor{
+public class LightSensor implements Sensor{
 
-    private double soundLevel;
+    private double lightlevel;
 
     @Override
     public String getSensorType() {
-        return "Sound";
+        return "Light";
     }
 
     @Override
     public double getReading() {
-        return soundLevel;
+        return lightlevel;
     }
 
     @Override
     public String getLocation() {
-        return "Bedroom";
+        return "Garden";
     }
 
     @Override
@@ -31,8 +30,8 @@ public class SoundSensor implements Sensor{
 
     @Override
     public String performAction() {
-        if(soundLevel >= 70)
-            return "An alert to turn on noise cancellation";
-        return "Sound is within normal range";
+        if(lightlevel <= 100)
+            return "“an alert to turn on the light";
+        return "Light is sufficient";
     }
 }
