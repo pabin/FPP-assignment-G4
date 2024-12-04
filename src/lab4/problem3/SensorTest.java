@@ -1,4 +1,4 @@
-package lab4;
+package lab4.problem3;
 
 public class SensorTest {
     public static void main(String[] args) {
