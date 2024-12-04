@@ -1,10 +1,6 @@
-package lab4.problem3;
+package lab4.problem1;
 
 
-import lab4.problem1.Clothing;
-import lab4.problem1.Electronics;
-import lab4.problem1.Furniture;
-import lab4.problem1.Product;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
