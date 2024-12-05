@@ -21,6 +21,11 @@ public class EmployeeDriver {
     }
 
     public static Employee getEmpoyeeWithMaxSalary(Employee[] employees) {
+
+        if (employees == null || employees.length == 0) {
+            throw new IllegalArgumentException("Invalid object argument");
+        }
+        
         Employee maxSalaryEmp = employees[0];
         for (Employee employee : employees) {
             if (employee.getPayment() > maxSalaryEmp.getPayment()) {
