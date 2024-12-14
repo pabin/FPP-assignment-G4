@@ -1,6 +1,4 @@
-package Prob1.src.prob1;
-
-import java.util.Objects;
+package lab11.Prob1.src.prob1;
 
 public class Student {
 	private String firstName;
