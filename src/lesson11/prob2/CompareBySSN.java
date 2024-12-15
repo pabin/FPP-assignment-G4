@@ -1,4 +1,4 @@
-package lab11.Prob1.Prob2.prob2;
+package lesson11.prob2;
 
 import java.util.Comparator;
 
