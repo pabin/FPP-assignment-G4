@@ -13,6 +13,9 @@ class Book {
     private String author;
     private boolean isBorrowed;
 
+    public Book() {
+
+    }
     public Book(String ISBN, String title, String author) {
         this.ISBN = ISBN;
         this.title = title;
@@ -42,31 +45,36 @@ class Book {
 
     public String borrowBook(String ISBN, Map<String, Book> map) {
         String confirmMessage = "";
-        if(map.containsKey(ISBN))
-            confirmMessage = "This book doesn't already exist";
+        if(!map.containsKey(ISBN))
+            confirmMessage = "This book doesn't exist";
         else {
             Book book = map.get(ISBN);
-            if(book.isBorrowed)
+            if(book.isBorrowed) {
                 confirmMessage = "This book is already borrowed";
-            else
-                book.setBorrowed(true);
+
+            }
+            else {
+                confirmMessage = "This book is can be borrowed";
+                System.out.println("Borrowed");
+                setBorrowed(true);
+            }
         }
         return confirmMessage;
     }
 
-    public Book returnBook(String ISBN, Map<String, Book> map, Book book) {
-        if(map.containsKey(ISBN))
+    public void returnBook(String ISBN, Map<String, Book> map) {
+        if(!map.containsKey(ISBN))
             System.out.println("This book doesn't exist");
         else {
-            book = map.get(ISBN);
+          Book  book = map.get(ISBN);
             if(book.isBorrowed)
-                book.setBorrowed(false);
+               setBorrowed(false);
         }
-       return book;
     }
 
-    public Book getBookDetails(String ISBN, Map<String, Book> map, Book book) {
-        if(map.containsKey(ISBN))
+    public Book getBookDetails(String ISBN, Map<String, Book> map) {
+        Book book = new Book();
+        if(!map.containsKey(ISBN))
             System.out.println("This book doesn't exist");
         else {
             book = map.get(ISBN);
@@ -94,6 +102,6 @@ class Book {
 
     @Override
     public String toString() {
-        return "Book{ISBN= "+  ISBN + "title= " + title + "Author: "+ author+ "Author: " +author+ "Borrowed= "+isBorrowed;
+        return "Book { ISBN= "+  ISBN + " title= " + title + " Author: "+ author+ " Author: " +author+ " Borrowed= "+isBorrowed + " }";
     }
 }
